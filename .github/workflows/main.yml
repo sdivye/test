@@ -42,5 +42,5 @@ jobs:
               
            cd /home/ubuntu &&
            sudo docker pull tushar0123/springboot_application:first &&
-           sudo docker run -d -p 80:8080  tushar0123/springboot_application:first --name springboot
+           sudo docker run -d -p 8081:8080  tushar0123/springboot_application:first --name springboot
           '
