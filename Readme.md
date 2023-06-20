@@ -10,11 +10,10 @@ sudo apt update && sudo apt install -y openjdk-11-jre
 
 
 <p>Install Maven, which is a build automation tool used primarily for Java projects.</p>
+
 ```
 sudo apt install -y maven
 ```
-bash
-
 
 # Setup and Build the Java Spring Boot Project
 
@@ -43,7 +42,7 @@ Load Environment Variables
 
 Source the ~/.bash_profile file to ensure that any necessary environment variables are loaded.
 
-``
+```
 source ~/.bash_profile
 ```
 
@@ -57,7 +56,7 @@ This guide covers configuring Nginx, running the Java Spring Boot application, a
 sudo apt install nginx -y
 ```
 ## Navigate to the Target Directory
-``
+```
 cd target/
 ```
 Running the Application
