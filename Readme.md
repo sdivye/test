@@ -3,6 +3,7 @@
 This guide covers the installation of necessary dependencies including OpenJDK and Maven.
 
 <p>Install the OpenJDK 11 Java Runtime Environment (JRE).</p>
+
 ```
 sudo apt update && sudo apt install -y openjdk-11-jre
 ```
