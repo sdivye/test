@@ -1,5 +1,4 @@
-# Spring Boot based Java web application
-# Installation of Dependencies This guide covers the installation of necessary dependencies including OpenJDK and Maven.
+Installation of Dependencies This guide covers the installation of necessary dependencies including OpenJDK and Maven for Springboot.
 
 <p>Install the OpenJDK 11 Java Runtime Environment (JRE). </p>
 
