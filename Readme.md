@@ -1,89 +1,29 @@
-# Installation of Dependencies
+# Spring Boot based Java web application
+ 
+This is a simple Sprint Boot based Java application that can be built using Maven. Sprint Boot dependencies are handled using the pom.xml 
+at the root directory of the repository.
 
-This guide covers the installation of necessary dependencies including OpenJDK and Maven.
+This is a MVC architecture based application where controller returns a page with title and message attributes to the view.
 
-<p>Install the OpenJDK 11 Java Runtime Environment (JRE).</p>
+## Execute the application locally and access it using your browser
 
-```
-sudo apt update && sudo apt install -y openjdk-11-jre
-```
+Checkout the repo and move to the directory
 
-
-
-<p>Install Maven, which is a build automation tool used primarily for Java projects.</p>
-
-```
-sudo apt install -y maven
-```
-
-# Setup and Build the Java Spring Boot Project
-
-This guide covers cloning the repository, navigating to the project directory, and building the project.
-
-## Cloning the Repository
-
-Clone the desired git repository.
 ```
 git clone https://github.com/Tushar-ops23/Jenkins-Zero-To-Hero.git
-```
-<p>Navigate to the Project Directory</p>
-
-Change directories to the Spring Boot project directory.
-```
-cd Jenkins-Zero-To-Hero/springboot/
-```
-Building the Project
-
-Use Maven to clean and package the project.
-```
-./mvnw clean package
+cd java-maven-sonar-argocd-helm-k8s/sprint-boot-app
 ```
 
-Load Environment Variables
-
-Source the ~/.bash_profile file to ensure that any necessary environment variables are loaded.
+Execute the Maven targets to generate the artifacts
 
 ```
-source ~/.bash_profile
+mvn clean package
 ```
 
+The above maven target stroes the artifacts to the `target` directory. You can either execute the artifact on your local machine.
 
-### 03-configure-nginx-and-run.md
-
-<p>Configure Nginx and Run the Application</p>
-
-This guide covers configuring Nginx, running the Java Spring Boot application, and restarting the Nginx service.
-```
-sudo apt install nginx -y
-```
-## Navigate to the Target Directory
-```
-cd target/
-```
-Running the Application
-
-Run the packaged jar file.
+### Execute locally (Java 11 needed) and access the application on http://localhost:8080
 
 ```
-java -jar spring-boot-web.jar &
-```
-Configure Nginx
-
-Navigate to the Nginx configuration directory and edit the default configuration file. Do this manually.
-```
-cd /etc/nginx/sites-available/
-sudo nano default
-```
-Copy the Jar File to the Web Server Root Directory
-
-```
-sudo cp ~/Jenkins-Zero-To-Hero/springboot/target/spring-boot-web.jar /var/www/html/
-```
-Create a Symlink for the Nginx Configuration
-```
-sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled/
-```
-Restart Nginx Service
-```
-sudo systemctl service nginx restart
+java -jar target/spring-boot-web.jar
 ```
